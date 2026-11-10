@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Forjada en hierro · Rutina de pierna x3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff1ec;--bg2:#ffe0d8;--ink:#2a0a18;--mute:#7d5565;--acc:#d6104f;--acc2:#8f0b36;--gold:#b8665a;--line:#e9b9ad;--on:#fff;
+--disp:'Big Shoulders Display','Impact','Arial Narrow',sans-serif;--body:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12060d;--bg2:#220a16;--ink:#ffeee8;--mute:#c79aa8;--acc:#ff2e7e;--acc2:#a3123f;--gold:#f0a898;--line:#4a1630;--on:#12060d}}
+:root[data-theme="dark"]{--bg:#12060d;--bg2:#220a16;--ink:#ffeee8;--mute:#c79aa8;--acc:#ff2e7e;--acc2:#a3123f;--gold:#f0a898;--line:#4a1630;--on:#12060d}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+a{color:inherit}
+.wrap{max-width:860px;margin:0 auto;padding:0 18px}
+header{position:relative;overflow:hidden;padding:44px 0 34px;background:linear-gradient(115deg,var(--bg) 0 58%,var(--acc2) 58.2% 100%)}
+header::after{content:"";position:absolute;right:-40px;top:0;bottom:0;width:38%;background:repeating-linear-gradient(115deg,transparent 0 14px,rgba(255,255,255,.07) 14px 16px);pointer-events:none}
+h1{font:900 clamp(56px,16vw,128px)/.84 var(--disp);text-transform:uppercase;margin:0;letter-spacing:-.01em}
+h1 span{display:block;color:transparent;-webkit-text-stroke:2px var(--acc);}
+.lema{max-width:30ch;margin:20px 0 0;font-weight:800;font-size:18px}
+.meta{margin:14px 0 0;color:var(--mute);font-size:14px;max-width:44ch}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:2px solid var(--acc)}
+nav .wrap{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;padding-top:8px;padding-bottom:8px}
+nav button{font:800 15px var(--disp);letter-spacing:.04em;text-transform:uppercase;border:0;background:var(--bg2);color:var(--ink);padding:10px 0 9px;cursor:pointer;clip-path:polygon(0 0,100% 0,100% 72%,86% 100%,0 100%);min-height:44px}
+nav button[aria-pressed="true"]{background:var(--acc);color:var(--on)}
+nav button.rest{color:var(--mute);background:transparent;border:1px dashed var(--line);clip-path:none}
+nav button.rest[aria-pressed="true"]{background:var(--bg2);color:var(--ink);border-color:var(--acc)}
+button:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.dia{padding:34px 0 10px}
+.dia h2{font:900 clamp(44px,11vw,84px)/.9 var(--disp);text-transform:uppercase;margin:0}
+.dia p.foco{margin:6px 0 0;color:var(--gold);font-weight:800}
+.prog{margin:18px 0 6px;height:8px;background:var(--bg2);position:relative}
+.prog i{position:absolute;inset:0 auto 0 0;background:var(--acc);width:0;transition:width .3s}
+.cnt{font-size:13px;color:var(--mute);margin:0 0 14px}
+ul.ex{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.ex li{display:grid;grid-template-columns:92px 1fr auto;align-items:stretch;background:var(--bg2);border-left:5px solid var(--acc);clip-path:polygon(0 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%)}
+.ex li.ok{opacity:.55}
+.ex li.ok .nm{text-decoration:line-through}
+.sr{border:0;background:var(--acc);color:var(--on);cursor:pointer;font:900 40px/1 var(--disp);padding:10px 0;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:76px}
+.sr small{font:700 13px var(--body);letter-spacing:.02em}
+.ex li.ok .sr{background:var(--gold)}
+.bd{padding:12px 14px;align-self:center}
+.nm{font-weight:800;font-size:17px;line-height:1.25}
+.nt{color:var(--mute);font-size:13px;margin-top:2px}
+.vd{align-self:center;margin:0 22px 0 0;padding:9px 14px;background:var(--ink);color:var(--bg);font-weight:800;font-size:13px;text-decoration:none;white-space:nowrap;border-radius:2px}
+.vd:hover{background:var(--acc);color:var(--on)}
+.rest-box{padding:28px 20px;border:2px dashed var(--line);margin-top:10px}
+.rest-box h3{font:900 34px var(--disp);text-transform:uppercase;margin:0 0 6px}
+section.extra{margin:46px 0 0;display:grid;gap:14px}
+.box{border:2px solid var(--line);padding:18px 20px;border-left:6px solid var(--gold)}
+.box.k{border-left-color:var(--acc);background:var(--bg2)}
+.box h3{font:900 28px/1 var(--disp);text-transform:uppercase;margin:0 0 8px}
+.box p{margin:0;max-width:62ch}
+footer{margin:46px 0 0;padding:28px 0 36px;background:var(--acc2);color:#fff1ec}
+footer p{margin:0;font:900 clamp(26px,6vw,40px)/1 var(--disp);text-transform:uppercase}
+footer small{display:block;margin-top:8px;font-size:12px;opacity:.85;max-width:60ch}
+@media (max-width:560px){.ex li{grid-template-columns:76px 1fr}.vd{grid-column:1 / -1;margin:0 14px 12px;text-align:center}.sr{font-size:34px}nav button{font-size:13px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>Forjada<span>en hierro</span></h1>
+<p class="lema">No vine a participar. Vine a dejar huella en cada serie.</p>
+<p class="meta">Pierna con frecuencia 3 · 90 minutos por sesión · descanso miércoles y domingo. Martes tracción, viernes empuje, sábado glúteo. Rodilla derecha protegida.</p>
+</div></header>
+<nav aria-label="Días de la semana"><div class="wrap" id="tabs"></div></nav>
+<main class="wrap">
+<div id="dia" class="dia" aria-live="polite"></div>
+<section class="extra">
+<div class="box"><h3>Calentamiento · 10 min</h3><p>5 min de bicicleta o elíptica suave, movilidad de cadera y tobillo, 2 series ligeras de puente de glúteo. Antes de cada día de pierna.</p></div>
+<div class="box"><h3>Cardio opcional</h3><p>15 min en la caminadora a ritmo moderado o una clase de zumba al final de la sesión. En días de pierna, elige caminadora: menos giros e impacto para la rodilla.</p></div>
+<div class="box k"><h3>Escudo de rodilla derecha</h3><p>Sin zancadas, búlgaras ni saltos. Molestia hasta 3/10 es aceptable; si sube, reduce rango o peso. Baja siempre en 2-3 segundos y sube carga solo cuando completes todas las series en el tope de repeticiones. Si el dolor dura más de 2-3 semanas, consulta a un fisioterapeuta.</p></div>
+</section>
+</main>
+<footer><div class="wrap"><p>La disciplina es tu armadura.</p><small>Toca el bloque de series para marcar un ejercicio como hecho. Los videos abren en YouTube y son de referencia: confirma la técnica antes de cargar peso.</small></div></footer>
+<script>
+var Y="https://www.youtube.com/watch?v=";
+var W={
+lunes:{n:"Lunes",t:"Pierna A",f:"Cuádriceps + glúteo",e:[
+["Prensa de pierna","5","8-10","Rango sin dolor",Y+"hl-EJUQ2yuc"],
+["Sentadilla hack en máquina","4","10-12","Pies altos",Y+"i4dMU7554Tk"],
+["Hip thrust","4","8-12","Barra o máquina",Y+"HYhnS0mln-E"],
+["Extensión de cuádriceps","4","12-15","Rango parcial sin dolor",Y+"zfJOoHBGXa8"],
+["Elevación de talones de pie","4","12-15","",Y+"_R3TOH-vnF8"]]},
+martes:{n:"Martes",t:"Torso: tracción",f:"Espalda, bíceps y core · solo jalar",e:[
+["Jalón al pecho","4","10","",Y+"EO9AmI-bu_0"],
+["Remo con barra","4","10","",Y+"tMlcnrW8s80"],
+["Remo en máquina","4","10-12","",Y+"rGeBwjJC8nU"],
+["Curl de bíceps con mancuernas","3","12","",Y+"INvA4GQIwNM"],
+["Plancha","3","40 s","Opcional: crunch en polea",Y+"dYlv41hbXFI"]]},
+jueves:{n:"Jueves",t:"Pierna B",f:"Cadena posterior + glúteo",e:[
+["Peso muerto rumano","5","8-10","",Y+"rjvlSfZ-PQw"],
+["Curl femoral acostado","4","10-12","",Y+"6JQflLWhKfg"],
+["Hip thrust con pausa","4","10-12","1 segundo arriba",Y+"HYhnS0mln-E"],
+["Hiperextensión 45°","4","12-15","Enfocada en glúteo",Y+"iswLfFB1EhA"],
+["Elevación de talones en prensa","4","15-20","Puntas en el borde inferior de la plataforma",Y+"xKdTNsVGuMc"]]},
+viernes:{n:"Viernes",t:"Torso: empuje",f:"Pecho, hombro y tríceps · solo empujar",e:[
+["Press de banca con mancuernas","4","8-10","",Y+"W-qU8CF-WeU"],
+["Press inclinado con mancuernas","4","10","",Y+"9fy0A5xWsgk"],
+["Press militar","3","10","",Y+"KS1NEO5ciww"],
+["Elevaciones laterales","3","15","",Y+"OCoQIC9ojAA"],
+["Extensión de tríceps en polea","3","12","Con cuerda",Y+"Fv7v6IAHc0I"]]},
+sabado:{n:"Sábado",t:"Pierna C: glúteo",f:"Día de glúteo al máximo",e:[
+["Hip thrust pesado","5","8-10","Sube la carga cada semana",Y+"HYhnS0mln-E"],
+["Peso muerto sumo","4","8-10","Controlado, sin sacrificar técnica",Y+"aMbhhzzP24A"],
+["Patada de glúteo en polea","4","12-15","Por pierna · contracción de 1 segundo",Y+"JH_2CxZXXKk"],
+["Abducción en máquina","4","15-20","Última serie hasta el límite",Y+"1nabNRrKUyU"]]}
+};
+var ORD=[["lunes","Lun"],["martes","Mar"],["miercoles","Mié"],["jueves","Jue"],["viernes","Vie"],["sabado","Sáb"],["domingo","Dom"]];
+var done={};
+try{done=JSON.parse(localStorage.getItem("guerrera-done")||"{}")||{}}catch(e){done={}}
+function save(){try{localStorage.setItem("guerrera-done",JSON.stringify(done))}catch(e){}}
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+function tabs(cur){
+ document.getElementById("tabs").innerHTML=ORD.map(function(d){
+  var rest=!W[d[0]];
+  return '<button data-d="'+d[0]+'" class="'+(rest?"rest":"")+'" aria-pressed="'+(d[0]===cur)+'">'+d[1]+'</button>';}).join("");
+}
+function show(k){
+ if(!k||!/^(lunes|martes|miercoles|jueves|viernes|sabado|domingo)$/.test(k)){k="lunes"}
+ tabs(k);
+ var box=document.getElementById("dia"),w=W[k];
+ if(!w){
+  var nm=k==="miercoles"?"Miércoles":"Domingo";
+  box.innerHTML='<h2>'+nm+'</h2><div class="rest-box"><h3>Descanso total</h3><p>Aquí se reconstruye el músculo. Duerme, come bien, hidrátate y muévete suave si te lo pide el cuerpo. La guerrera que descansa, regresa más fuerte.</p></div>';
+  return;
+ }
+ var d=done[k]||[],h='<h2>'+w.t+'</h2><p class="foco">'+w.n+' · '+w.f+'</p><div class="prog"><i style="width:'+(d.length/w.e.length*100)+'%"></i></div><p class="cnt">'+d.length+' de '+w.e.length+' ejercicios completados</p><ul class="ex">';
+ w.e.forEach(function(x,i){
+  var ok=d.indexOf(i)>-1;
+  h+='<li class="'+(ok?"ok":"")+'"><button class="sr" data-i="'+i+'" aria-pressed="'+ok+'" aria-label="Marcar '+esc(x[0])+' como hecho">'+x[1]+'<small>x '+x[2]+'</small></button><div class="bd"><div class="nm">'+esc(x[0])+'</div>'+(x[3]?'<div class="nt">'+esc(x[3])+'</div>':'')+'</div><a class="vd" href="'+x[4]+'" target="_blank" rel="noopener">Ver video</a></li>';
+ });
+ box.innerHTML=h+'</ul>';
+ box.dataset.k=k;
+}
+document.getElementById("tabs").addEventListener("click",function(e){
+ var b=e.target.closest("button");if(!b)return;
+ location.hash=b.dataset.d;
+});
+document.getElementById("dia").addEventListener("click",function(e){
+ var b=e.target.closest(".sr");if(!b)return;
+ var k=this.dataset.k,i=+b.dataset.i;done[k]=done[k]||[];
+ var p=done[k].indexOf(i);p>-1?done[k].splice(p,1):done[k].push(i);
+ save();show(k);
+});
+window.addEventListener("hashchange",function(){show(location.hash.slice(1))});
+var hoy=["domingo","lunes","martes","miercoles","jueves","viernes","sabado"][new Date().getDay()];
+show(location.hash.slice(1)||hoy);
+</script>
+</body>
+</html>
